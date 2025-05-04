@@ -19,7 +19,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px; /* General spacing between items */
+    gap: 10px; 
   }
   
   /* Logo */
@@ -51,7 +51,7 @@ body {
   }
   
   .input-section + .input-section {
-    margin-top: 27.5px; /* Space between username and password */
+    margin-top: 27.5px; 
   }
   
   /* Input Label */
