@@ -116,7 +116,7 @@ body {
   
   .text-container { 
     display: flex;
-    justify-content: center; /* 👈 Centered horizontally */
+    justify-content: center; 
     align-items: center;
     margin-right: 20px;
 
