@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign In / Sign Up</title>
+  <link rel="stylesheet" href="signinmenu.globals.css" />
+  <link rel="stylesheet" href="signinmenu.style.css" />
+</head>
+<body>
+  <div class="SIGN-IN-MENU">
+    <div class="container">
+      <!-- Logo & Title -->
+      <div class="logo-section">
+        <img class="imf-logo" src="IMAGES/imf-logo.png" alt="IMF Logo" />
+        <div class="company-name">CONSTRUCTION CORP.</div>
+      </div>
+
+      <!-- Login Form -->
+      <form class="auth-form">
+        <div class="input-group">
+          <label for="username" class="input-label">USERNAME</label>
+          <input type="text" id="username" placeholder="Type here..." />
+        </div>
+
+        <div class="input-group">
+          <label for="mobile" class="input-label">MOBILE NUMBER</label>
+          <input type="tel" id="mobile" placeholder="Type here..." />
+        </div>
+
+        <div class="input-group">
+          <label for="email" class="input-label">EMAIL</label>
+          <input type="email" id="email" placeholder="Type here..." />
+        </div>
+
+        <div class="input-group">
+          <label for="password" class="input-label">PASSWORD</label>
+          <input type="password" id="password" placeholder="Type here..." />
+        </div>
+
+        <div class="input-group">
+          <label for="confirm-password" class="input-label">CONFIRM PASSWORD</label>
+          <input type="password" id="confirm-password" placeholder="Type here..." />
+        </div>
+
+        <div class="input-group">
+          <label for="security-pin" class="input-label">SECURITY PIN</label>
+          <input type="text" id="security-pin" placeholder="Type here..." maxlength="4" />
+        </div>
+
+        <button type="submit" class="login-button">LOG IN</button>
+      </form>
+
+      <!-- Links -->
+      <div class="auth-links">
+        <div class="forgot-password">Forgot password?</div>
+        <div class="switch-mode">Already have an Account?</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,109 @@
+.SIGN-IN-MENU {
+  background-color: var(--primary-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background-color: var(--primary-bg);
+  width: 100%;
+  max-width: 412px;
+  min-height: 500px;
+  padding: 20px;
+  position: relative;
+}
+
+.logo-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.imf-logo {
+  width: 346px;
+  height: auto;
+}
+
+.company-name {
+  font-size: 16px;
+  letter-spacing: 9.76px;
+  margin-top: 20px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.input-label {
+  font-size: 10px;
+  letter-spacing: 6.10px;
+  text-transform: uppercase;
+}
+
+input {
+  padding: 15px 25px;
+  border-radius: 60px;
+  border: none;
+  font-size: 12px;
+  letter-spacing: 1px;
+  background-color: var(--secondary-bg);
+  color: #000;
+}
+
+input::placeholder {
+  color: var(--placeholder-color);
+  font-size: 10px;
+  letter-spacing: 6.10px;
+  text-transform: uppercase;
+}
+
+.login-button {
+  margin-top: 10px;
+  padding: 15px;
+  border-radius: 60px;
+  background-color: var(--secondary-bg);
+  color: #000;
+  font-size: 16px;
+  letter-spacing: 1.60px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: #f0f0f0;
+}
+
+.auth-links {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  font-size: 10px;
+  letter-spacing: 1px;
+  color: var(--text-color);
+}
+
+/* Responsive tweak */
+@media (max-width: 450px) {
+  .container {
+    max-width: 95%;
+  }
+
+  .company-name {
+    font-size: 14px;
+  }
+}
