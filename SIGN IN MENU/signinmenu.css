@@ -1,0 +1,177 @@
+/* Base Styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Russo One', sans-serif;
+  background-color: #8B1C23;
+}
+
+.login-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 412px;
+  min-height: 500px;
+  background-color: #8B1C23;
+  padding: 20px;
+  color: white;
+}
+
+/* Logo Section Container */
+.logo-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* Logo */
+.logo {
+  flex-shrink: 0;
+  width: 346px;
+  height: 158px;
+  margin-bottom: 12px;
+}
+
+.logo svg {
+  width: 100%;
+  height: 100%;
+  fill: white;
+}
+
+/* Company Name */
+.company-name {
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 9.50px;
+  color: #FFF;
+  margin-bottom: 88px;
+}
+
+/* Input Sections */
+.input-section {
+  width: 100%;
+}
+
+.input-section + .input-section {
+  margin-top: 27.5px;
+}
+
+/* Input Label */
+.input-label {
+  width: 330px;
+  height: 15px;
+  color: #FFF;
+  font-family: 'Russo One';
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 6.1px;
+  text-align: left;
+  margin-bottom: 10px;
+  margin-left: 20px;
+}
+
+/* Input Field */
+.input-field {
+  width: 370px;
+  height: 50px;
+  border-radius: 60px;
+  background: #FFF;
+  padding: 22.5px;
+  color: #000;
+  font-family: 'Russo One', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  transition: background-color 0.3s ease;
+}
+
+.input-field:focus {
+  outline: 2px solid #8B1C23;
+}
+
+.input-field::placeholder {
+  color: #D9D9D9;
+  font-family: 'Russo One';
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 6.1px;
+}
+
+.input-field.security-pin::placeholder {
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+/* Log In Button */
+.login-button {
+  width: 200px;
+  height: 50px;
+  border-radius: 60px;
+  background-color: #FFFFFF;
+  color: #000;
+  font-family: 'Russo One', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 1.6px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 59px;
+}
+
+/* Hover effect for button */
+.login-button:hover {
+  background-color: #f9f9f9;
+  border: 3px solid #000;
+  transform: scale(1.02);
+}
+
+/* Navigation Prompts */
+.signup-prompt,
+.forgot-password {
+  display: flex;
+  width: 149px;
+  height: 12px;
+  padding: 8px 4px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.text-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.text {
+  color: #FFFFFF;
+  text-align: center;
+  font-family: 'Russo One', sans-serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  margin-top: 40px;
+}
+
+.text:hover {
+  color: #D9D9D9;
+  font-weight: bold;
+  text-decoration: underline;
+  transform: scale(1.05);
+}
