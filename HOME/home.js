@@ -1,25 +1,7 @@
-// const searchImg = document.getElementById("searchImg");
-// const searchPanel = document.getElementById("searchPanel");
-// const clearButton = document.getElementById("clearSearch");
-// const searchTextbox = document.getElementById("searchTextbox");
-
-// searchImg.addEventListener("click", () => {
-//   searchPanel.classList.add("active");
-// });
-
-// document.addEventListener("click", (event) => {
-//   const isClickInside = searchPanel.contains(event.target) || searchImg.contains(event.target);
-//   if (!isClickInside) {
-//     searchPanel.classList.remove("active");
-//   }
-// });
-
-// clearButton.addEventListener("click", () => {
-//   searchTextbox.value = "";
-// });
 
 
 
+// SEARCH PANEL
 const searchButton = document.getElementById("search");
 const searchPanel = document.getElementById("searchPanel");
 const clearButton = document.getElementById("clearSearch");
@@ -28,7 +10,7 @@ const overlay = document.getElementById("overlay");
 // Show panel + overlay
 searchButton.addEventListener("click", () => {
   searchPanel.classList.add("active");
-  overlay.classList.add("active");
+  overlay.classList.add("active"); 
 });
 
 // Hide panel when clicking overlay
@@ -40,4 +22,30 @@ overlay.addEventListener("click", () => {
 // Clear only the input (not hiding the panel)
 clearButton.addEventListener("click", () => {
   document.getElementById("searchTextbox").value = "";
+});
+
+
+
+const searchInput = document.getElementById('searchTextbox');
+const clearBtn = document.getElementById('clearSearch');
+
+function filterCards() {
+  const searchedWord = searchInput.value.toLowerCase().trim();
+  const cards = document.querySelectorAll('.card');
+
+  cards.forEach(card => {
+    const cardText = card.innerText.toLowerCase();
+    if (cardText.includes(searchedWord)) {
+      card.classList.remove('hide');
+    } else {
+      card.classList.add('hide');
+    }
+  });
+}
+
+searchInput.addEventListener('input', filterCards);
+
+clearBtn.addEventListener('click', () => {
+  searchInput.value = '';
+  filterCards();
 });

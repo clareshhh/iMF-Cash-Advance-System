@@ -8,7 +8,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: auto;
+    height: auto; 
 }
 
 .home-container {
@@ -139,6 +139,18 @@ body {
 
 
 #card1, #card2, #card3, #card4, #card5, #card6, #card7, #card8, #card9{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    width: 358px;
+    height: 108px;
+    background-color: hsla(0, 0%, 100%, 0.8);
+    border-radius: 10px;
+    /* gap: 35px; */
+}
+
+
+.card{
     display: flex;
     /* justify-content: center; */
     align-items: center;
@@ -503,6 +515,13 @@ body {
   #overlay.active {
     opacity: 1;
     pointer-events: all;
+  }
+
+
+
+  /* JAVASCRIPT */
+  .hide {
+    display: none;
   }
 
 
