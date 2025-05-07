@@ -375,6 +375,66 @@
         </div>
     </div>
 
+    <!-- FILTER PANEL -->
+    <div id="overlay"></div>
+
+    <div id="filterPanel">
+        <div id="filter-header">
+            <div id="leftInfoTop">
+                <p>Filter</p>
+            </div>
+            <div id="rightInfoTop">
+                <p id="clearFilterSearch">Clear</p>
+            </div>
+            
+            
+        </div>
+        <hr>
+        
+        <!-- PERIOD -->
+        <div id="periodText"><p id="filterClassificiation">Period</p></div>
+        <div id="period-container">
+            <button id="todayBtn">Today</button>
+            <button id="weekBtn">This week</button>
+            <button id="monthBtn">This month</button>
+            <button id="prevMonthBtn">Previous Month</button>
+            <button id="yearBtn">This year</button>
+        </div>
+
+
+        <!-- DATES -->
+        <div id="selectDateText"><p id="filterClassificiation">Select Date</p></div>
+        <div id="selectDate-container">
+            <button id="firstDate">
+                <img id="calendarIcon" src="filter-icons/calendar-icon.png">
+                11 Dec 2018
+            </button>
+            -
+            <button id="secondDate">
+                <img id="calendarIcon" src="filter-icons/calendar-icon.png">
+                20 Sep 2023
+            </button>
+        </div>
+
+        <br><hr>
+        <!-- STATUS -->
+        <div id="statusText"><p id="filterClassificiation">Status</p></div>
+        <div id="status-container">
+            <button id="confirmedBtn">Confirmed</button>
+            <button id="pendingBtn">Pending</button>
+            <button id="canceledBtn">Canceled</button>
+        </div>
+
+        <!-- SHOW RESULTS -->
+        <div id="showResults-container">
+            <button id="showResultsBtn" onclick="showFilteredResults()">Show results</button>
+        </div>
+
+    </div>
+  
+
+
+
     <script src="home.js"></script>
 
 </body>

@@ -111,6 +111,8 @@ body {
 
 #filterImg{
     width: 15px;
+    cursor: pointer;
+
 }
 
 
@@ -465,7 +467,7 @@ body {
     height: 120px;
     background-color: white;
     box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.15s ease-out, opacity 0.15s ease-out;
+    transition: transform 0.25s ease-in-out, opacity 0.15s ease-out;
 
     padding: 20px;
     z-index: 1000;
@@ -534,32 +536,178 @@ body {
   }
 
 
-  /* #searchPanel {
-    position: absolute;
-    top: 115px;
-    left: 50%;
-    transform: translateX(100%); 
-    width: 400px;
-    max-width: 412px;
-    height: 120px;
+
+
+
+
+
+
+  /* FILTER PANEL */
+  
+
+  #filterPanel {
+    position: fixed;
+    /* bottom: px; */
+    /* left: 50%; */
+    transform: translate(0, 160%);
+    width: 390px;
+    height: 460px;
     background-color: white;
     box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.15s ease-out, opacity 0.15s ease-out;
-    padding: 20px;
+    transition: transform 0.25s ease-in-out, opacity 0.15s ease-out;
+
+    padding: 5px 20px;
     z-index: 1000;
     border-radius: 20px;
     font-size: 14px;
-    font-family: Lato;
+    font-family: 'Proxima Nova', Lato;
     color: rgb(38, 39, 58);
     font-weight: 500;
-  
-    opacity: 0;
+    /* opacity: 0; */
     pointer-events: none;
   }
-  
-  #searchPanel.active {
-    transform: translateX(-50%); 
+
+
+  #filter-header{
+    /* border: 1px solid; */
+    display: flex;
+    flex-direction: row;
+    font-weight: 500;
+    /* border-bottom: 0.1px solid rgba(54, 54, 54, 0.123); */
+    margin-top: 5px;
+    font-size: 16px;
+    
+  }
+
+  #filterClassificiation{
+    font-size: 16px;
+    color: rgb(38, 39, 58);
+    font-weight: 500;
+    font-family: 'Promixa Nova', Lato;
+    margin: 0px;
+    padding: 0px;
+    /* border: 1px solid; */
+
+  }
+
+  #clearFilterSearch{
+    text-align: right;
+    /* border: 1px solid; */
+    /* margin-left: 280px; */
+    font-weight: 700;
+    color:#8b1c2398;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+hr {
+    width: 389px;
+    transform: translate(-5%);
+    border-top: 1px solid hsla(0, 0%, 35%, 0.288)
+}
+
+#periodText{
+    /* border: 1px solid; */
+    display: flex;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+#period-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    /* border: 1px solid; */
+
+}
+
+#period-container button{
+    border: 1px solid rgba(196, 196, 196, 0.548);
+    background-color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    /* font-size: 14px; */
+    color: rgb(38, 39, 58);
+    font-family: 'Promixa Nova', Lato;
+}
+
+#selectDateText{
+    /* border: 1px solid; */
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+#selectDate-container{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#selectDate-container button{
+    border: 1px solid rgba(196, 196, 196, 0.548);
+    background-color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    /* font-size: 14px; */
+    color: rgb(38, 39, 58);
+    font-family: 'Promixa Nova', Lato;
+    display: inline;
+}
+
+#calendarIcon{
+    align-items: center;
+}
+
+#statusText{
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+
+#status-container{
+    display: flex;
+    gap: 10px;
+}
+
+
+#status-container button{
+    border: 1px solid rgba(196, 196, 196, 0.548);
+    background-color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    /* font-size: 14px; */
+    color: rgb(38, 39, 58);
+    font-family: 'Promixa Nova', Lato;
+}
+
+
+#showResults-container{
+    /* border: 1px solid; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    height: 60px;
+}
+
+
+#showResultsBtn{
+    width: 330px;
+    height: 44px;
+    color: white;
+    font-family: 'Promixa Nova', Lato;
+    font-size: 16px;
+    border: none;
+    background-color: #8B1C23;
+    border-radius: 12px;
+}
+
+#filterPanel.active {
+    transform: translate(0, 54%);
     opacity: 1;
     pointer-events: all;
-  } */
-  
+  }

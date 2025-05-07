@@ -1,7 +1,7 @@
 
 
 
-// SEARCH PANEL
+// SEARCH PANEL ANIMATION SLIDE IN
 const searchButton = document.getElementById("search");
 const searchPanel = document.getElementById("searchPanel");
 const clearButton = document.getElementById("clearSearch");
@@ -13,16 +13,18 @@ searchButton.addEventListener("click", () => {
   overlay.classList.add("active"); 
 });
 
-// Hide panel when clicking overlay
+// Hide panel 
 overlay.addEventListener("click", () => {
   searchPanel.classList.remove("active");
   overlay.classList.remove("active");
 });
 
-// Clear only the input (not hiding the panel)
+// Clear the input
 clearButton.addEventListener("click", () => {
   document.getElementById("searchTextbox").value = "";
 });
+
+
 
 
 // SEARCH BUT FOR EVERY TEXT IN THE CARD
@@ -76,4 +78,20 @@ searchInput.addEventListener('input', filterCards);
 clearBtn.addEventListener("click", () => {
   searchInput.value = "";
   filterCards();
+});
+
+
+
+// FILTER ANIMATION SLIDE IN
+const filterBtn = document.getElementById("filter");
+const filterPanel = document.getElementById("filterPanel");
+
+filterBtn.addEventListener("click", () => {
+  filterPanel.classList.add("active");
+  overlay.classList.add("active");
+});
+
+overlay.addEventListener("click", () => {
+  filterPanel.classList.remove("active");
+  overlay.classList.remove("active");
 });
