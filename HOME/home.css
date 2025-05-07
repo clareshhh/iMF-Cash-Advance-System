@@ -137,87 +137,101 @@ body {
 
 }
 
-
-#card1, #card2, #card3, #card4, #card5, #card6, #card7, #card8, #card9{
+.card {
     display: flex;
-    /* justify-content: center; */
-    align-items: center;
+    align-items: flex-start;
     width: 358px;
-    height: 108px;
+    min-height: 108px;
     background-color: hsla(0, 0%, 100%, 0.8);
     border-radius: 10px;
-    /* gap: 35px; */
-}
-
-
-.card{
-    display: flex;
-    /* justify-content: center; */
-    align-items: center;
-    width: 358px;
-    height: 108px;
-    background-color: hsla(0, 0%, 100%, 0.8);
-    border-radius: 10px;
-    /* gap: 35px; */
-}
-
-#transactionIcon{
+    padding: 15px 10px 15px 20px;
     /* border: 1px solid; */
-    height: 100%;
+}
+  
+#transactionIcon {
+    width: 52px;
     display: flex;
     justify-content: center;
-    align-items: center;
-    width: 25%;
-    margin-top: 15px;
+    align-items: right;
+    margin-top: 7px;
+    /* border: 1px solid; */
+    /* margin-left: ; */
 
 }
-
-#iconImage{
+  
+#iconImage {
     background-color: #8B1C23;
     width: 50px;
     height: 50px;
     border-radius: 10px;
-    margin-left: 20px;
-    margin-bottom: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
-        
-}
-
-#leftInfo{
-    display: flex;
-    flex-direction: column;
     /* border: 1px solid; */
-    height: 90%;
-    width: 80%;
-    margin-top: 10px;
-    margin-left: 15px;
-}
-
-#bottomLeftInfo{
-    /* border: 1px solid; */
-    margin-top: auto;
-    margin-bottom: 5px;
-}
-
-#rightInfo{
-    display: flex;
-    flex-direction: column;
-    text-align: right;
-    height: 90%;
-    width: 40%;
-    margin-right: 20px;
-    margin-top: 10px;
-    /* border: 1px solid; */
-}
-
-#bottomRightInfo{
-    /* border: 1px solid; */
-    margin-top: auto;
-    margin-bottom: 5px;
     
 }
+  
+#infoContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 15px;
+    margin-right: 10px;
+    flex: 1;
+    gap: 5px;
+    /* border: 1px solid; */
+
+}
+  
+#topRow {
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid;  */
+
+}
+
+#leftInfoTop{
+    flex-direction: column;
+    width: 65%;
+    /* border: 1px solid; */
+}
+  
+#rightInfoTop {
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    /* border: 1px solid; */
+    align-items: flex-end;
+}
+
+
+
+  
+#bottomRow {
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+    /* border: 1px solid; */
+}
+  
+#bottomLeftInfo{
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    /* border: 1px solid; */
+}
+
+#bottomRightInfo {
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    /* border: 1px solid; */
+    align-items: flex-end;
+}
+
+
+
+
 
 
 
@@ -233,7 +247,7 @@ body {
     font-family: Lato;
     color: rgb(38, 39, 58);
     font-size: 14px;
-    margin-top: 3px;
+    margin-top: 5px;
 
 }
 
@@ -256,57 +270,46 @@ body {
     background-color: rgb(255, 184, 0, 0.2);
     width: 50px;
     border-radius: 25px;
-    margin-left: 40px;
     height: 15px;
-    /* border: 1px solid; */
-    margin-top: 5px;
-
+    margin-top: 7px;
 }
 
 #pending{
-    margin-right: 5px;
     color: rgb(244, 154, 71);
     font-size: 10px;
     font-family: Lato;
     text-align: center;
-    margin-left: 6px;
 }
 
 #statusConfirmed{
     background-color: rgb(0, 255, 148, 0.2);
     width: 60px;
     border-radius: 25px;
-    margin-left: 30px;
-    margin-top: 5px;
-
+    margin-top: 7px;
+    height: 15px;
 }
 
 #confirmed{
-    margin-right: 5px;
     color: rgb(75, 167, 112);
     font-size: 10px;
     font-family: Lato;
     text-align: center;
-    margin-left: 6px;
 }
 
 #statusCanceled{
     background-color: rgb(245, 75, 75, 0.2);
     width: 50px;
     border-radius: 25px;
-    margin-left: 40px;
-    margin-top: 5px;
-
+    margin-top: 7px;
+    height: 15px;
 
 }
 
 #canceled{
-    margin-right: 5px;
     color: rgb(245, 75, 95);
     font-size: 10px;
     font-family: Lato;
     text-align: center;
-    margin-left: 6px;
 }
 
 #date{
