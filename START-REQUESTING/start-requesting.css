@@ -15,8 +15,12 @@ body {
     /* border: 1px solid; */
     width: 415px;
     height: 100vh;
-    position: relative;
+    /* position: relative; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
 
 /* HEADER */
 .header {
@@ -116,242 +120,54 @@ body {
 }
 
 
-
 /* BODY */
-.home-body{
+.startrequesting-body{
     display: flex;
     flex-direction: column;
     background-color: #8B1C23;
     width: 100%;
     height: auto;
-    /* justify-content: center; */
+    justify-content: center;
     align-items: center;
     gap: 25px;
-    /* padding-top: 100px; */
-    position: relative;
-}
-
-#body-header{
-    width: 415px;
-    height: 100px;
-    flex-shrink: 0;
-    position: relative;
 
 }
 
-.card {
-    display: flex;
-    align-items: flex-start;
-    width: 358px;
-    min-height: 108px;
-    background-color: hsla(0, 0%, 100%, 0.8);
-    border-radius: 10px;
-    padding: 15px 10px 15px 20px;
+
+
+#startrequestingText{
     /* border: 1px solid; */
+    font-family: 'Russo One', Lato;
+    font-size: 16px;
+    color:white;
+    font-weight: 700;
 }
-  
-#transactionIcon {
-    width: 52px;
-    display: flex;
-    justify-content: center;
-    align-items: right;
-    margin-top: 7px;
-    /* border: 1px solid; */
-    /* margin-left: ; */
 
-}
-  
-#iconImage {
-    background-color: #8B1C23;
-    width: 50px;
+#stBtn{
+    border: none;
+    font-family: 'Russo One', Lato;
+    font-size: 19px;
+    background-color: white;
+    border-radius: 60px;
+    width: 264px;
     height: 50px;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* border: 1px solid; */
-    
-}
-  
-#infoContainer {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin-left: 15px;
-    margin-right: 10px;
-    flex: 1;
-    gap: 5px;
-    /* border: 1px solid; */
-
-}
-  
-#topRow {
-    display: flex;
-    justify-content: space-between;
-    /* border: 1px solid;  */
-
+    font-weight: 700;
+    cursor: pointer;
 }
 
-#leftInfoTop{
-    flex-direction: column;
-    width: 65%;
-    /* border: 1px solid; */
-}
-  
-#rightInfoTop {
-    display: flex;
-    flex-direction: column;
-    width: 35%;
-    /* border: 1px solid; */
-    align-items: flex-end;
+#stBtn:hover{
+    border: 3px solid;
+    text-shadow: 3px 3px 3px rgba(54, 54, 54, 0.466);
+
 }
 
 
 
-  
-#bottomRow {
-    display: flex;
-    justify-content: space-between;
-    margin-top: auto;
-    /* border: 1px solid; */
-}
-  
-#bottomLeftInfo{
-    display: flex;
-    flex-direction: column;
-    font-size: 12px;
-    /* border: 1px solid; */
-}
-
-#bottomRightInfo {
-    display: flex;
-    flex-direction: column;
-    font-size: 12px;
-    /* border: 1px solid; */
-    align-items: flex-end;
-}
 
 
 
-.transactionName{
-    font-family: Lato;
-    color: rgb(38, 39, 58);
-    font-size: 16px;
-    font-weight: bolder;
-    margin-top: 5px;
-}
 
 
-
-#amount{
-    font-family: Lato;
-    color: rgb(38, 39, 58);
-    font-size: 16px;
-    font-weight: bolder;
-    margin-top: 5px;
-}
-
-#payment{
-    font-family: Lato;
-    color: rgb(38, 39, 58);
-    font-size: 14px;
-    margin-top: 5px;
-
-}
-
-#mobileNo{
-    font-family: Lato;
-    color: rgba(38, 39, 58, 0.6);
-    font-size: 12px;
-    margin-top: 3px;
-}
-
-#number{
-    font-family: Lato;
-    color: rgba(38, 39, 58);
-    font-size: 12px;
-}
-
-
-
-#statusPending{
-    background-color: rgb(255, 184, 0, 0.2);
-    width: 50px;
-    border-radius: 25px;
-    height: 15px;
-    margin-top: 7px;
-}
-
-#pending{
-    color: rgb(244, 154, 71);
-    font-size: 10px;
-    font-family: Lato;
-    text-align: center;
-}
-
-#statusConfirmed{
-    background-color: rgb(0, 255, 148, 0.2);
-    width: 60px;
-    border-radius: 25px;
-    margin-top: 7px;
-    height: 15px;
-}
-
-#confirmed{
-    color: rgb(75, 167, 112);
-    font-size: 10px;
-    font-family: Lato;
-    text-align: center;
-}
-
-#statusCanceled{
-    background-color: rgb(245, 75, 75, 0.2);
-    width: 50px;
-    border-radius: 25px;
-    margin-top: 7px;
-    height: 15px;
-
-}
-
-#canceled{
-    color: rgb(245, 75, 95);
-    font-size: 10px;
-    font-family: Lato;
-    text-align: center;
-}
-
-#date{
-    font-family: Lato;
-    color: rgba(38, 39, 58, 0.6);
-    font-size: 12px;
-    margin-top: 3px;
-}
-
-#time{
-    font-family: Lato;
-    color: rgba(38, 39, 58, 0.6);
-    font-size: 12px;
-}
-
-
-/* BODY TRANSACTION IMAGES */
-/* #backhoeImg{
-}
-
-#budgetImg{
-}
-
-#excavationImg{
-}
-
-#truckImg{
-}
-
-#gasImg{
-}
-
-#toolboxImg{
-} */
 
 
 
@@ -371,8 +187,6 @@ body {
     z-index: 1;
     gap: 60px;
 }
-
-
 
 #navLink{
     display: flex;
@@ -616,6 +430,7 @@ body {
     display: flex;
     flex-direction: row;
     font-weight: 500;
+    justify-content: space-between;
     /* border-bottom: 0.1px solid rgba(54, 54, 54, 0.123); */
     margin-top: 5px;
     font-size: 16px;
@@ -633,8 +448,19 @@ body {
 
   }
 
+  #leftInfoTop{
+    display: flex;
+    align-self: flex-end;
+    /* border: 1px solid; */
+  }
+
+  #rightInfoTop{
+    display: flex;
+    align-items: flex-end;
+    /* border: 1px solid; */
+  }
+
   #clearFilterSearch{
-    text-align: right;
     /* border: 1px solid; */
     /* margin-left: 280px; */
     font-weight: 700;
