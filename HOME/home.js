@@ -10,7 +10,7 @@ const overlay = document.getElementById("overlay");
 // Show panel + overlay
 searchButton.addEventListener("click", () => {
   searchPanel.classList.add("active");
-  overlay.classList.add("active"); 
+  overlay.classList.add("active");  
 });
 
 // Hide panel 
@@ -95,3 +95,45 @@ overlay.addEventListener("click", () => {
   filterPanel.classList.remove("active");
   overlay.classList.remove("active");
 });
+
+
+// FILTER BUTTONS ACTIVE
+const periodButtons = document.querySelectorAll("#period-container button");
+const statusButtons = document.querySelectorAll("#status-container button");
+
+periodButtons.forEach(button => {
+  button.addEventListener("click", () => {
+    if(button.classList.contains("active")) {
+      button.classList.remove('active');
+    } else {
+
+      periodButtons.forEach(btn => btn.classList.remove("active"));
+      button.classList.add("active");
+    }
+
+  });
+});
+
+
+statusButtons.forEach(button => {
+  button.addEventListener("click", () => {
+    if(button.classList.contains("active")) {
+      button.classList.remove('active');
+    } else {
+
+      statusButtons.forEach(btn => btn.classList.remove("active"));
+      button.classList.add("active");
+    }
+
+  });
+});
+
+
+// FILTER: CLEAR BUTTON
+const clearFilterSearch = document.getElementById("clearFilterSearch");
+
+clearFilterSearch.addEventListener("click", () => {
+  periodButtons.forEach(button => button.classList.remove("active"));
+  statusButtons.forEach(button => button.classList.remove("active"));
+});
+

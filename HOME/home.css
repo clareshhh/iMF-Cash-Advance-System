@@ -8,7 +8,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: auto; 
+    height: auto;  
 }
 
 .home-container {
@@ -553,7 +553,7 @@ body {
   }
 
 
-  #overlay {
+#overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -566,7 +566,7 @@ body {
     transition: opacity 0.15s ease-out;
   }
   
-  #overlay.active {
+#overlay.active {
     opacity: 1;
     pointer-events: all;
   }
@@ -590,15 +590,14 @@ body {
 
   #filterPanel {
     position: fixed;
-    /* bottom: px; */
+    bottom: 0;
     /* left: 50%; */
-    transform: translate(0, 160%);
+    transform: translate(0, 100%); /* start off-screen below */
     width: 390px;
     height: 460px;
     background-color: white;
     box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
     transition: transform 0.25s ease-in-out, opacity 0.15s ease-out;
-
     padding: 5px 20px;
     z-index: 1000;
     border-radius: 20px;
@@ -611,7 +610,7 @@ body {
   }
 
 
-  #filter-header{
+#filter-header{
     /* border: 1px solid; */
     display: flex;
     flex-direction: row;
@@ -622,7 +621,7 @@ body {
     
   }
 
-  #filterClassificiation{
+#filterClassificiation{
     font-size: 16px;
     color: rgb(38, 39, 58);
     font-weight: 500;
@@ -633,7 +632,7 @@ body {
 
   }
 
-  #clearFilterSearch{
+#clearFilterSearch{
     text-align: right;
     /* border: 1px solid; */
     /* margin-left: 280px; */
@@ -659,7 +658,7 @@ hr {
 #period-container{
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 12px;
     /* border: 1px solid; */
 
 }
@@ -672,6 +671,7 @@ hr {
     /* font-size: 14px; */
     color: rgb(38, 39, 58);
     font-family: 'Promixa Nova', Lato;
+    cursor: pointer;
 }
 
 #selectDateText{
@@ -697,6 +697,8 @@ hr {
     color: rgb(38, 39, 58);
     font-family: 'Promixa Nova', Lato;
     display: inline;
+    cursor: pointer;
+
 }
 
 #calendarIcon{
@@ -725,6 +727,7 @@ hr {
     /* font-size: 14px; */
     color: rgb(38, 39, 58);
     font-family: 'Promixa Nova', Lato;
+    cursor: pointer;
 }
 
 
@@ -747,10 +750,19 @@ hr {
     border: none;
     background-color: #8B1C23;
     border-radius: 12px;
+    cursor: pointer;
 }
 
 #filterPanel.active {
-    transform: translate(0, 54%);
+    transform: translate(0, 2%);
     opacity: 1;
     pointer-events: all;
   }
+
+
+#period-container button.active, #selectDate-container button.active, #status-container button.active {
+    background-color: #8B1C23;
+    color: white;
+    border: none;
+
+}
