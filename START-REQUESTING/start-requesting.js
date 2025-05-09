@@ -102,5 +102,5 @@ overlay.addEventListener("click", () => {
 const startRequestingButton = document.getElementById("stBtn");
 
 startRequestingButton.addEventListener("click", () => {
-  window.location.href = "/USER-FORMS/user-forms.html";
+  window.location.href = "../USER-FORMS/user-forms.html";
 });

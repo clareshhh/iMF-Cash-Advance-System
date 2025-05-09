@@ -12,9 +12,11 @@ window.addEventListener("DOMContentLoaded", () => {
     const mobileNo = document.getElementById("mobileNoInput").value;
     const description = document.getElementById("descriptionInput").value;
     const budget = document.getElementById("budgetInput").value;
+    const paymentType = document.getElementById("paymentInput").value; 
+
 
     // Make sure all fields are filled (optional validation)
-    if (!name || !mobileNo || !description || !budget) {
+    if (!name || !mobileNo || !description || !budget || !paymentType) {
       alert("Please fill out all fields.");
       return;
     }
@@ -25,8 +27,17 @@ window.addEventListener("DOMContentLoaded", () => {
       mobileNo,
       description,
       budget,
-      date: new Date().toLocaleDateString(),
-      time: new Date().toLocaleTimeString()
+      paymentType,
+      date: new Date().toLocaleDateString('en-GB', {
+        day: '2-digit',
+        month: 'short',
+        year: 'numeric'
+      }),
+      time: new Date().toLocaleTimeString('en-US', {
+        hour: 'numeric',
+        minute: '2-digit',
+        hour12: true
+      })
     };
 
     // Get existing requests or set to empty array

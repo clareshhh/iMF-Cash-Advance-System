@@ -146,15 +146,23 @@ const container = document.getElementById("transactionContainer");
 // Get saved data from localStorage
 const requests = JSON.parse(localStorage.getItem("requests")) || [];
 
+// FORMAT THE PAYMENT TYPE
+const formatPaymentType = (type) => {
+  if (type === "cashAdvance") return "Cash Advance";
+  if (type === "payroll") return "Payroll";
+  return type;
+}
+
 // Loop through each request and make a card
 requests.reverse().forEach((request) => {
   const card = document.createElement("div");
   card.classList.add("card");
 
+
   card.innerHTML = `
     <div id="transactionIcon"> 
       <div id="iconImage">
-        <img id="backhoeImg" src="transaction-icons/backhoe-image.png">
+        <img id="budgetImg" src="transaction-icons/budget-image.png">
       </div>
     </div>
 
@@ -162,7 +170,7 @@ requests.reverse().forEach((request) => {
       <div id="topRow">
         <div id="leftInfoTop">
           <div class="transactionName">${request.name}</div>
-          <div id="payment">${request.description}</div>
+          <div id="payment">${formatPaymentType(request.paymentType)}</div>
         </div>
         <div id="rightInfoTop">
           <div id="amount">₱ ${Number(request.budget).toLocaleString('en-PH', {

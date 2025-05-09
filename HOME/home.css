@@ -284,7 +284,7 @@ body {
 
 #statusPending{
     background-color: rgb(255, 184, 0, 0.2);
-    width: 50px;
+    width: 55px;
     border-radius: 25px;
     height: 15px;
     margin-top: 7px;
@@ -295,6 +295,7 @@ body {
     font-size: 10px;
     font-family: Lato;
     text-align: center;
+    margin-top: 1px;
 }
 
 #statusConfirmed{
@@ -310,11 +311,12 @@ body {
     font-size: 10px;
     font-family: Lato;
     text-align: center;
+    margin-top: 2.5px;
 }
 
 #statusCanceled{
     background-color: rgb(245, 75, 75, 0.2);
-    width: 50px;
+    width: 55px;
     border-radius: 25px;
     margin-top: 7px;
     height: 15px;
@@ -326,6 +328,7 @@ body {
     font-size: 10px;
     font-family: Lato;
     text-align: center;
+    margin-top: 2px;
 }
 
 #date{
