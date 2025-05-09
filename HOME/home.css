@@ -115,7 +115,15 @@ body {
 
 }
 
-
+/* TRANSACTION CARDS */
+#transactionContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+    width: 100%;
+    /* border: 1px solid; */
+}
 
 /* BODY */
 .home-body{

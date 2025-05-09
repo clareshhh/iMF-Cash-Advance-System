@@ -137,3 +137,53 @@ clearFilterSearch.addEventListener("click", () => {
   statusButtons.forEach(button => button.classList.remove("active"));
 });
 
+
+
+// FROM USER FORMS TO TRANSACTION CARDS IN HOME PAGE
+// Get the container where cards will go
+const container = document.getElementById("transactionContainer");
+
+// Get saved data from localStorage
+const requests = JSON.parse(localStorage.getItem("requests")) || [];
+
+// Loop through each request and make a card
+requests.reverse().forEach((request) => {
+  const card = document.createElement("div");
+  card.classList.add("card");
+
+  card.innerHTML = `
+    <div id="transactionIcon"> 
+      <div id="iconImage">
+        <img id="backhoeImg" src="transaction-icons/backhoe-image.png">
+      </div>
+    </div>
+
+    <div id="infoContainer">
+      <div id="topRow">
+        <div id="leftInfoTop">
+          <div class="transactionName">${request.name}</div>
+          <div id="payment">${request.description}</div>
+        </div>
+        <div id="rightInfoTop">
+          <div id="amount">₱ ${Number(request.budget).toLocaleString('en-PH', {
+            minimumFractionDigits: 2
+          })}</div>
+          <div id="statusPending"><div id="pending">pending</div></div>
+        </div>
+      </div>
+
+      <div id="bottomRow">
+        <div id="bottomLeftInfo">
+          <div id="mobileNo">Mobile No.</div>
+          <div id="number">${request.mobileNo}</div>
+        </div>
+        <div id="bottomRightInfo">
+          <div id="date">${request.date}</div>
+          <div id="time">${request.time}</div>
+        </div>
+      </div>
+    </div>
+  `;
+
+  container.appendChild(card);
+});

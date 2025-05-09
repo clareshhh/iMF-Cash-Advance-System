@@ -406,15 +406,14 @@ body {
 
   #filterPanel {
     position: fixed;
-    /* bottom: px; */
+    bottom: 0;
     /* left: 50%; */
-    transform: translate(0, 160%);
+    transform: translate(0, 100%); /* start off-screen below */
     width: 390px;
     height: 460px;
     background-color: white;
     box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
     transition: transform 0.25s ease-in-out, opacity 0.15s ease-out;
-
     padding: 5px 20px;
     z-index: 1000;
     border-radius: 20px;
@@ -427,19 +426,18 @@ body {
   }
 
 
-  #filter-header{
+#filter-header{
     /* border: 1px solid; */
     display: flex;
     flex-direction: row;
     font-weight: 500;
-    justify-content: space-between;
     /* border-bottom: 0.1px solid rgba(54, 54, 54, 0.123); */
     margin-top: 5px;
     font-size: 16px;
     
   }
 
-  #filterClassificiation{
+#filterClassificiation{
     font-size: 16px;
     color: rgb(38, 39, 58);
     font-weight: 500;
@@ -451,19 +449,22 @@ body {
   }
 
   #leftInfoTop{
-    display: flex;
-    align-self: flex-end;
+    flex-direction: column;
+    width: 65%;
     /* border: 1px solid; */
-  }
+}
 
-  #rightInfoTop{
+  #rightInfoTop {
     display: flex;
+    flex-direction: column;
+    width: 35%;
+    /* border: 1px solid; */
     align-items: flex-end;
-    /* border: 1px solid; */
-  }
+}
 
-  #clearFilterSearch{
-    /* border: 1px solid; */
+#clearFilterSearch{
+    text-align: right;
+    border: 1px solid;
     /* margin-left: 280px; */
     font-weight: 700;
     color:#8b1c2398;
@@ -487,7 +488,7 @@ hr {
 #period-container{
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 12px;
     /* border: 1px solid; */
 
 }
@@ -500,6 +501,7 @@ hr {
     /* font-size: 14px; */
     color: rgb(38, 39, 58);
     font-family: 'Promixa Nova', Lato;
+    cursor: pointer;
 }
 
 #selectDateText{
@@ -525,6 +527,8 @@ hr {
     color: rgb(38, 39, 58);
     font-family: 'Promixa Nova', Lato;
     display: inline;
+    cursor: pointer;
+
 }
 
 #calendarIcon{
@@ -553,6 +557,7 @@ hr {
     /* font-size: 14px; */
     color: rgb(38, 39, 58);
     font-family: 'Promixa Nova', Lato;
+    cursor: pointer;
 }
 
 
@@ -575,10 +580,19 @@ hr {
     border: none;
     background-color: #8B1C23;
     border-radius: 12px;
+    cursor: pointer;
 }
 
 #filterPanel.active {
-    transform: translate(0, 54%);
+    transform: translate(0, 2%);
     opacity: 1;
     pointer-events: all;
   }
+
+
+#period-container button.active, #selectDate-container button.active, #status-container button.active {
+    background-color: #8B1C23;
+    color: white;
+    border: none;
+
+}

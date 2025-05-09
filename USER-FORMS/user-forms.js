@@ -1,97 +1,44 @@
 
 
 
-// SEARCH PANEL ANIMATION SLIDE IN
-const searchButton = document.getElementById("search");
-const searchPanel = document.getElementById("searchPanel");
-const clearButton = document.getElementById("clearSearch");
-const overlay = document.getElementById("overlay");
+// SUBMIT REQUEST BUTTON | CREATES A DIV CARD FOR THE NEW REQUEST TRANSACTION
+// Wait until the page is fully loaded
+window.addEventListener("DOMContentLoaded", () => {
+  const submitBtn = document.getElementById("submitRequestBtn");
 
-// Show panel + overlay
-searchButton.addEventListener("click", () => {
-  searchPanel.classList.add("active");
-  overlay.classList.add("active"); 
-});
+  submitBtn.addEventListener("click", () => {
+    // Get values from inputs
+    const name = document.getElementById("nameInput").value;
+    const mobileNo = document.getElementById("mobileNoInput").value;
+    const description = document.getElementById("descriptionInput").value;
+    const budget = document.getElementById("budgetInput").value;
 
-// Hide panel 
-overlay.addEventListener("click", () => {
-  searchPanel.classList.remove("active");
-  overlay.classList.remove("active");
-});
+    // Make sure all fields are filled (optional validation)
+    if (!name || !mobileNo || !description || !budget) {
+      alert("Please fill out all fields.");
+      return;
+    }
 
-// Clear the input
-clearButton.addEventListener("click", () => {
-  document.getElementById("searchTextbox").value = "";
-});
+    // Create new request object
+    const newRequest = {
+      name,
+      mobileNo,
+      description,
+      budget,
+      date: new Date().toLocaleDateString(),
+      time: new Date().toLocaleTimeString()
+    };
 
+    // Get existing requests or set to empty array
+    const existingRequests = JSON.parse(localStorage.getItem("requests")) || [];
 
+    // Add the new request to the array
+    existingRequests.push(newRequest);
 
+    // Save back to localStorage
+    localStorage.setItem("requests", JSON.stringify(existingRequests));
 
-// SEARCH BUT FOR EVERY TEXT IN THE CARD
-// const searchInput = document.getElementById('searchTextbox');
-// const clearBtn = document.getElementById('clearSearch');
-
-// function filterCards() {
-//   const searchedWord = searchInput.value.toLowerCase().trim();
-//   const cards = document.querySelectorAll('.card');
-
-//   cards.forEach(card => {
-//     const cardText = card.innerText.toLowerCase();
-//     if (cardText.includes(searchedWord)) {
-//       card.classList.remove('hide');
-//     } else {
-//       card.classList.add('hide');
-//     }
-//   });
-// }
-
-// searchInput.addEventListener('input', filterCards);
-
-// clearBtn.addEventListener('click', () => {
-//   searchInput.value = '';
-//   filterCards();
-// });
-
-// SEARCH BUT FOR THE TRANSACTION NAME ONLY
-const searchInput = document.getElementById("searchTextbox");
-const clearBtn = document.getElementById("clearSearch");
-
-function filterCards(){
-  const searchedWord = searchInput.value.toLowerCase().trim()
-  const cards = document.querySelectorAll(".card");
-
-  cards.forEach(card => {
-  const eachTransactionName = card.querySelector(".transactionName"); //use card.querySelector cuz we are inside the forEach loop
-  const transactionName = eachTransactionName.innerText.toLowerCase().trim();
-
-      if(transactionName.includes(searchedWord)) {
-        card.classList.remove('hide');
-      } else {
-        card.classList.add('hide');
-      }
-
+    // Redirect to home page
+    window.location.href = "../HOME/home.html";
   });
-}
-  
-searchInput.addEventListener('input', filterCards);
-
-clearBtn.addEventListener("click", () => {
-  searchInput.value = "";
-  filterCards();
-});
-
-
-
-// FILTER ANIMATION SLIDE IN
-const filterBtn = document.getElementById("filter");
-const filterPanel = document.getElementById("filterPanel");
-
-filterBtn.addEventListener("click", () => {
-  filterPanel.classList.add("active");
-  overlay.classList.add("active");
-});
-
-overlay.addEventListener("click", () => {
-  filterPanel.classList.remove("active");
-  overlay.classList.remove("active");
 });
