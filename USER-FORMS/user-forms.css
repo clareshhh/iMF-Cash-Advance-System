@@ -9,6 +9,8 @@ body {
     justify-content: center;
     align-items: center;
     height: auto;  
+    font-family: 'Russo One', sans-serif;
+
 }
 
 .home-container {
@@ -103,7 +105,7 @@ body {
 }
 
 .infoContainer label{
-    font-family: 'Russo One', Lato;
+    font-family: 'Russo One', sans-serif;
     font-size: 14px;
     color: white;
     margin-left: 10px;
@@ -115,8 +117,8 @@ body {
     height: 50px;
     border: none;
     border-radius: 60px;
-    color: #D9D9D9;
-    font-family: 'Russo One', Lato;
+    color: #424242;
+    font-family: 'Russo One', sans-serif;
     padding: 10px 25px;
 }
 
@@ -126,7 +128,7 @@ body {
     border: none;
     border-radius: 60px;
     color: #D9D9D9;
-    font-family: 'Russo One', Lato;
+    font-family: 'Russo One', sans-serif;
     padding: 10px 25px;
 }
 
@@ -151,7 +153,7 @@ body {
 
 #submitRequestBtn{
     border: none;
-    font-family: 'Russo One', Lato;
+    font-family: 'Russo One', sans-serif;
     font-size: 19px;
     background-color: white;
     border-radius: 60px;

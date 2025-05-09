@@ -137,7 +137,8 @@ body {
 
 #startrequestingText{
     /* border: 1px solid; */
-    font-family: 'Russo One', Lato;
+    /* font-family: 'Russo One', Lato; */
+    font-family: 'Russo One', sans-serif;
     font-size: 16px;
     color:white;
     font-weight: 700;
@@ -145,7 +146,8 @@ body {
 
 #stBtn{
     border: none;
-    font-family: 'Russo One', Lato;
+    /* font-family: 'Russo One', Lato; */
+    font-family: 'Russo One', sans-serif;
     font-size: 19px;
     background-color: white;
     border-radius: 60px;
