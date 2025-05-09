@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Start Requesting</title>
+  <link rel="stylesheet" href="user-forms.css">
+</head>
+<body>
+<div class="home-container">
+    <!-- HEADER -->
+    <div class="header">
+        <!-- USERNAME -->
+        <div id="username">
+            <div id="usernameIcon">
+                <img id="usernameImg" src="header-icons/usernameImage.png">
+            </div>
+            <div><p id="usernameText">Username</p></div>
+        </div>
+    </div>
+
+    
+    <div class="home-body">
+        <!-- Input Sections -->
+        <div class="input-section">
+            <div class="input-label">NAME</div>
+            <input type="text" class="input-field" placeholder="Type here..." />
+        </div>
+    
+        <div class="input-section">
+            <div class="input-label">PURPOSE</div>
+            <input type="text" class="input-field" placeholder="Type here..." />
+        </div>
+    
+        <div class="input-section">
+            <div class="input-label">DESCRIPTION</div>
+            <input type="tel" class="input-field" placeholder="Type here..." />
+        </div>
+    
+        <div class="input-section">
+            <div class="input-label">BUDGET</div>
+            <input type="email" class="input-field" placeholder="Type here..." />
+        </div>
+    
+        <div class="input-section">
+            <div class="input-label">CASH ADVANCE / PAYROLL</div>
+            <input type="password" class="input-field" placeholder="Type here..." />
+        </div>
+    
+    
+        <!-- Log In Button -->
+        <button class="login-button" data-target="DASHBOARD">SIGN UP</button>
+    
+        </div>
+    </div>
+       
+    
+
+
+
+
+        <!-- FOOTER -->
+    <div class="footer">
+        <div class="menuIcon">
+            <a id="navLink" href="../HOME/home.html"><img class="menuImg" src="footer-icons/menuImage.png"></a>
+        </div>
+
+        <div class="addIcon">
+            <a id="navLink" href="start-requesting.html"><img class="addImg" src="footer-icons/addImage.png"></a>
+        </div>
+
+        <div class="profileIcon">
+            <a id="navLink" href="../PROFILE/profile.html"><img class="profileImg" src="footer-icons/profileImage.png"></a>
+        </div>
+    </div>
+
+
+    <!-- SEARCH PANEL -->
+    <div id="overlay"></div>
+    <div id="searchPanel">
+        <div class="search-header">
+                <label for="searchTextbox" id="searchLabel">Search</label>
+                <p id="clearSearch">Clear</p>  
+            <input type="search" id="searchTextbox" value="">
+        </div>
+    </div>
+
+    <!-- FILTER PANEL -->
+    <div id="overlay"></div>
+
+    <div id="filterPanel">
+        <div id="filter-header">
+            <div id="leftInfoTop">
+                <p>Filter</p>
+            </div>
+            <div id="rightInfoTop">
+                <p id="clearFilterSearch">Clear</p>
+            </div>
+            
+            
+        </div>
+        <hr>
+        
+        <!-- PERIOD -->
+        <div id="periodText"><p id="filterClassificiation">Period</p></div>
+        <div id="period-container">
+            <button id="todayBtn">Today</button>
+            <button id="weekBtn">This week</button>
+            <button id="monthBtn">This month</button>
+            <button id="prevMonthBtn">Previous Month</button>
+            <button id="yearBtn">This year</button>
+        </div>
+
+
+        <!-- DATES -->
+        <div id="selectDateText"><p id="filterClassificiation">Select Date</p></div>
+        <div id="selectDate-container">
+            <button id="firstDate">
+                <img id="calendarIcon" src="filter-icons/calendar-icon.png">
+                11 Dec 2018
+            </button>
+            -
+            <button id="secondDate">
+                <img id="calendarIcon" src="filter-icons/calendar-icon.png">
+                20 Sep 2023
+            </button>
+        </div>
+
+        <br><hr>
+        <!-- STATUS -->
+        <div id="statusText"><p id="filterClassificiation">Status</p></div>
+        <div id="status-container">
+            <button id="confirmedBtn">Confirmed</button>
+            <button id="pendingBtn">Pending</button>
+            <button id="canceledBtn">Canceled</button>
+        </div>
+
+        <!-- SHOW RESULTS -->
+        <div id="showResults-container">
+            <button id="showResultsBtn" onclick="showFilteredResults()">Show results</button>
+        </div>
+
+    </div>
+  
+</div>
+
+
+    <script src="user-forms.js"></script>
+
+</body>
+</html>

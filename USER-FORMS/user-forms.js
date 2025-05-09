@@ -95,12 +95,3 @@ overlay.addEventListener("click", () => {
   filterPanel.classList.remove("active");
   overlay.classList.remove("active");
 });
-
-
-
-// START REQUESTING BUTTON GOES TO USER FORMS PAGE
-const startRequestingButton = document.getElementById("stBtn");
-
-startRequestingButton.addEventListener("click", () => {
-  window.location.href = "/USER-FORMS/user-forms.html";
-});

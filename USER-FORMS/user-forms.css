@@ -1,0 +1,592 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #8B1C23;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto; 
+}
+
+.home-container {
+    /* border: 1px solid; */
+    width: 415px;
+    height: 100vh;
+    /* position: relative; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* HEADER */
+.header {
+    display: flex;
+    background: rgb(255, 255, 255);
+    width: 415px;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+#username {
+    display: flex;
+    background-color: #8B1C23;
+    font-family: 'Russo One', sans-serif;
+    width: 342px;
+    height: 45px;
+    border-radius: 10px;
+    align-items: center;
+
+}
+
+#usernameIcon{
+    /* background-color: white; */
+    margin-left: 20px;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid; */
+}
+
+#usernameImg{
+    width: 40px;
+}
+
+#usernameText{
+    color: white;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+
+
+
+
+
+/* BODY */
+.home-body{
+    display: flex;
+    flex-direction: column;
+    background-color: #8B1C23;
+    width: 100%;
+    /* height: auto; */
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    border: 1px solid;
+
+}
+
+
+/* Input Sections */
+.input-section {
+    width: 100%;
+  }
+  
+  .input-section + .input-section {
+    margin-top: 27.5px;
+  }
+  
+  /* Input Label */
+  .input-label {
+    width: 330px;
+    height: 15px;
+    color: #FFF;
+    font-family: 'Russo One';
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 6.1px;
+    text-align: left;
+    margin-bottom: 10px;
+    margin-left: 20px;
+  }
+  
+  /* Input Field */
+  .input-field {
+    width: 370px;
+    height: 50px;
+    border-radius: 60px;
+    background: #FFF;
+    padding: 22.5px;
+    color: #000;
+    font-family: 'Russo One', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .input-field:focus {
+    outline: 2px solid #8B1C23;
+  }
+  
+  .input-field::placeholder {
+    color: #D9D9D9;
+    font-family: 'Russo One';
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 6.1px;
+  }
+  
+  .input-field.security-pin::placeholder {
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-weight: 500;
+  }
+  
+  /* Log In Button */
+  .login-button {
+    width: 200px;
+    height: 50px;
+    border-radius: 60px;
+    background-color: #FFFFFF;
+    color: #000;
+    font-family: 'Russo One', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1.6px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 59px;
+  }
+  
+  /* Hover effect for button */
+  .login-button:hover {
+    background-color: #f9f9f9;
+    border: 3px solid #000;
+    transform: scale(1.02);
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+/* FOOTER */
+.footer {
+    background: rgb(255, 255, 255);
+    width: 415px;
+    height: 100px;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-50%);
+    z-index: 1;
+    gap: 60px;
+}
+
+#navLink{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* MENU */
+.menuIcon{
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid; */
+    cursor: pointer;
+}
+
+
+.menuImg {
+    transition: opacity 0.1s ease-out;
+}
+
+.menuIcon:hover .menuImg {
+    opacity: 0; /* Makes the original image invisible */
+}
+
+.menuIcon:hover {
+    background-image: url("footer-icons/menuImage2.png");
+    background-size: 48px 44px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.menuIcon:hover .menuImg {
+    opacity: 0; /* Makes the original image disappear */
+}
+
+
+
+
+
+/* ADD */
+.addIcon{
+    /* background-color: #8B1C23; */
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid; */
+    cursor: pointer;
+
+}
+
+.addImg {
+    transition: opacity 0.1s ease-out;
+}
+
+.addIcon:hover .addImg {
+    opacity: 0; /* Makes the original image invisible */
+}
+
+.addIcon:hover {
+    background-image: url("footer-icons/addImage2.png");
+    background-size: 45px 45px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.addIcon:hover .addImg {
+    opacity: 0; /* Makes the original image disappear */
+}
+
+
+
+
+/* PROFILE */
+.profileIcon{
+    /* background-color: #8B1C23; */
+    width: 50px;
+    height: 50px;
+    border-radius: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid; */
+    cursor: pointer;
+
+}
+
+.profileImg {
+    transition: opacity 0.1s ease-out;
+}
+
+.profileIcon:hover .profileImg {
+    opacity: 0; /* Makes the original image invisible */
+}
+
+.profileIcon:hover {
+    background-image: url("footer-icons/profileImage2.png");
+    background-size: 45px 45px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.profileIcon:hover .profileImg {
+    opacity: 0; /* Makes the original image disappear */
+}
+
+
+
+#body-footer{
+    width: 415px;
+    height: 100px;
+}
+
+
+
+
+
+
+
+/* SEARCH PANEL */
+
+
+#searchPanel {
+    position: fixed;
+    top: 115px;
+    left: 50%;
+    transform: translate(100%, 0);
+    width: 400px;
+    height: 120px;
+    background-color: white;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.25s ease-in-out, opacity 0.15s ease-out;
+
+    padding: 20px;
+    z-index: 1000;
+    border-radius: 20px;
+    font-size: 14px;
+    font-family: Lato;
+    color: rgb(38, 39, 58);
+    font-weight: 500;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+
+#searchLabel{
+    display: inline;
+}
+
+#searchTextbox{
+    width: 360px;
+    margin-top: 30px;
+    border-radius: 5px;
+    height: 25px;
+    font-size: 14px;
+}
+
+#clearSearch{
+    margin-left: 280px;
+    /* border: 1px solid; */
+    font-weight: 700;
+    color:#8b1c2398;
+    display: inline;
+    width: 200px;
+    cursor: pointer;
+}
+
+#searchPanel.active {
+    transform: translate(-50%, 0);
+    opacity: 1;
+    pointer-events: all;
+  }
+
+
+  #overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(32, 45, 65, 0.603); /* blue transparent */
+    z-index: 999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.15s ease-out;
+  }
+  
+  #overlay.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+
+
+  /* JAVASCRIPT */
+  .hide {
+    display: none;
+  }
+
+
+
+
+
+
+
+
+  /* FILTER PANEL */
+  
+
+  #filterPanel {
+    position: fixed;
+    /* bottom: px; */
+    /* left: 50%; */
+    transform: translate(0, 160%);
+    width: 390px;
+    height: 460px;
+    background-color: white;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.25s ease-in-out, opacity 0.15s ease-out;
+
+    padding: 5px 20px;
+    z-index: 1000;
+    border-radius: 20px;
+    font-size: 14px;
+    font-family: 'Proxima Nova', Lato;
+    color: rgb(38, 39, 58);
+    font-weight: 500;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+
+  #filter-header{
+    /* border: 1px solid; */
+    display: flex;
+    flex-direction: row;
+    font-weight: 500;
+    justify-content: space-between;
+    /* border-bottom: 0.1px solid rgba(54, 54, 54, 0.123); */
+    margin-top: 5px;
+    font-size: 16px;
+    
+  }
+
+  #filterClassificiation{
+    font-size: 16px;
+    color: rgb(38, 39, 58);
+    font-weight: 500;
+    font-family: 'Promixa Nova', Lato;
+    margin: 0px;
+    padding: 0px;
+    /* border: 1px solid; */
+
+  }
+
+  #leftInfoTop{
+    display: flex;
+    align-self: flex-end;
+    /* border: 1px solid; */
+  }
+
+  #rightInfoTop{
+    display: flex;
+    align-items: flex-end;
+    /* border: 1px solid; */
+  }
+
+  #clearFilterSearch{
+    /* border: 1px solid; */
+    /* margin-left: 280px; */
+    font-weight: 700;
+    color:#8b1c2398;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+hr {
+    width: 389px;
+    transform: translate(-5%);
+    border-top: 1px solid hsla(0, 0%, 35%, 0.288)
+}
+
+#periodText{
+    /* border: 1px solid; */
+    display: flex;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+#period-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    /* border: 1px solid; */
+
+}
+
+#period-container button{
+    border: 1px solid rgba(196, 196, 196, 0.548);
+    background-color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    /* font-size: 14px; */
+    color: rgb(38, 39, 58);
+    font-family: 'Promixa Nova', Lato;
+}
+
+#selectDateText{
+    /* border: 1px solid; */
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+#selectDate-container{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#selectDate-container button{
+    border: 1px solid rgba(196, 196, 196, 0.548);
+    background-color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    /* font-size: 14px; */
+    color: rgb(38, 39, 58);
+    font-family: 'Promixa Nova', Lato;
+    display: inline;
+}
+
+#calendarIcon{
+    align-items: center;
+}
+
+#statusText{
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+
+#status-container{
+    display: flex;
+    gap: 10px;
+}
+
+
+#status-container button{
+    border: 1px solid rgba(196, 196, 196, 0.548);
+    background-color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    /* font-size: 14px; */
+    color: rgb(38, 39, 58);
+    font-family: 'Promixa Nova', Lato;
+}
+
+
+#showResults-container{
+    /* border: 1px solid; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    height: 60px;
+}
+
+
+#showResultsBtn{
+    width: 330px;
+    height: 44px;
+    color: white;
+    font-family: 'Promixa Nova', Lato;
+    font-size: 16px;
+    border: none;
+    background-color: #8B1C23;
+    border-radius: 12px;
+}
+
+#filterPanel.active {
+    transform: translate(0, 54%);
+    opacity: 1;
+    pointer-events: all;
+  }
