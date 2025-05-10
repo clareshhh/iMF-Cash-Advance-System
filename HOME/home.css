@@ -188,7 +188,7 @@ body {
     margin-left: 15px;
     margin-right: 10px;
     flex: 1;
-    gap: 5px;
+    /* gap: 5px; */
     /* border: 1px solid; */
 
 }
@@ -214,6 +214,27 @@ body {
     align-items: flex-end;
 }
 
+
+#midRow {
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid; */
+    margin-bottom: 10px;
+}
+
+#midLeftInfo{
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    /* border: 1px solid; */
+}
+
+#midRightInfo{
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid; */
+    align-items: flex-end;
+}
 
 
   

@@ -14,7 +14,7 @@ window.addEventListener("DOMContentLoaded", () => {
     const budget = document.getElementById("budgetInput").value;
     const paymentType = document.getElementById("paymentInput").value; 
 
-
+    
     // Make sure all fields are filled (optional validation)
     if (!name || !mobileNo || !description || !budget || !paymentType) {
       alert("Please fill out all fields.");
