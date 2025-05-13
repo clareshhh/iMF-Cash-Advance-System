@@ -206,5 +206,12 @@ requests.reverse().forEach((request) => {
     </div>
   `;
 
+
+card.addEventListener("click", () => {
+    localStorage.setItem("selectedRequest", JSON.stringify(request));
+    window.location.href = "../MORE-INFO/more-info.html";
+});
+
+
   container.appendChild(card);
 });
