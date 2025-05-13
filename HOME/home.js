@@ -158,7 +158,7 @@ const iconOption = (option) => {
   if(option === "payroll") return "toolbox";
 }
 
-// Loop through each request and make a card
+// LOOPP THRU EACH REQUEST FROM THE USERFOMRS, TO THEN CREATE A CARD
 requests.reverse().forEach((request) => {
   const card = document.createElement("div");
   card.classList.add("card");
