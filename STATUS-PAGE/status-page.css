@@ -89,10 +89,10 @@ body {
     height: auto;
     justify-content: center;
     align-items: center;
-    gap: 25px;
+    gap: 10px;
     /* padding-top: 100px; */
     position: relative;
-    border: 1px solid;
+    /* border: 1px solid; */
     height: 95vh;
 }
 
@@ -101,20 +101,35 @@ body {
     height: 100px;
     flex-shrink: 0;
     position: relative;
-    border: 1px solid;
-
-
+    /* border: 1px solid; */
 }
+
+/* 
+#back-image{
+    border: 1px solid;
+    margin-right: 100px;
+} */
+
+#backImage{
+    /* border: 1px solid; */
+    margin-right: 300px;
+    cursor: pointer;
+}
+
+/* #completeTransactionContainer{
+    border: 1px solid;
+} */
 
 .card {
     display: flex;
+    flex-direction: column;
     align-items: flex-start;
     width: 358px;
     min-height: 108px;
     background-color: hsla(0, 0%, 100%, 0.8);
     border-radius: 10px;
     padding: 15px 10px 15px 20px;
-    border: 1px solid;
+    /* border: 1px solid; */
 }
   
 #transactionIcon {
@@ -148,7 +163,7 @@ body {
     margin-right: 10px;
     flex: 1;
     /* gap: 5px; */
-    border: 1px solid;
+    /* border: 1px solid; */
 
 }
   
@@ -329,12 +344,31 @@ body {
     align-items: flex-start;
     width: 100%;
     /* border-radius: 10px; */
-    border: 1px solid;
+    /* border: 1px solid; */
 }
 
-/* #bottomInfoContainer{
-    
-} */
+
+#bottomInfoContainer{
+    margin-top: 5px;
+    /* border: 1px solid; */
+}
+
+
+
+#description, #status{
+    font-family: Lato;
+    color: rgba(38, 39, 58, 0.6);
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+#textDescription, #textStatus{
+    font-family: Lato;
+    color: rgba(38, 39, 58);
+    font-size: 12px;
+    /* margin-top: 1px; */
+
+}
 
 
 

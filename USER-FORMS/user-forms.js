@@ -50,6 +50,6 @@ window.addEventListener("DOMContentLoaded", () => {
     localStorage.setItem("requests", JSON.stringify(existingRequests));
 
     // Redirect to home page
-    window.location.href = "../HOME/home.html";
+    window.location.href = "../STATUS-PAGE/status-page.html";
   });
 });
